@@ -2,7 +2,7 @@
 
 MoveInSync campus case study B. A company-scoped policy assistant built with **Python, FastAPI, Chroma, local MiniLM embeddings, a real LLM and JWT**.
 
-I chose B because its main flow is easier to explain, test and modify in a viva than a durable approval workflow or a secure SQL-generation service. The design combines a **model-written conclusion with server-built evidence**: the LLM applies the active policy to the question and returns Yes, No, a conditional explanation, a direct factual answer, or not covered. Exact quotations remain separate under **Check the evidence**. There are no question-specific or section-specific answer templates.
+The design combines a **model-written conclusion with server-built evidence**: the LLM applies the active policy to the question and returns Yes, No, a conditional explanation, a direct factual answer, or not covered. Exact quotations remain separate under **Check the evidence**. There are no question-specific or section-specific answer templates.
 
 ## System design diagrams
 
