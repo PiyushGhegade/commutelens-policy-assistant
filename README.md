@@ -4,6 +4,57 @@ MoveInSync campus case study B. A company-scoped policy assistant built with **P
 
 I chose B because its main flow is easier to explain, test and modify in a viva than a durable approval workflow or a secure SQL-generation service. The design combines a **model-written conclusion with server-built evidence**: the LLM applies the active policy to the question and returns Yes, No, a conditional explanation, a direct factual answer, or not covered. Exact quotations remain separate under **Check the evidence**. There are no question-specific or section-specific answer templates.
 
+## System design diagrams
+
+### Functional and non-functional requirements
+
+![CommuteLens functional and non-functional requirements](System%20Design/Funtional%20%26%20Non%20Funtional.png)
+
+### System architecture
+
+![CommuteLens application architecture, retrieval, answer generation and citation validation](System%20Design/System%20Design.png)
+
+### Policy ingestion flow
+
+![Policy ingestion flow from administrator authentication through indexing and atomic activation](System%20Design/Ingestion%20Connection.png)
+
+## Initial setup before the first launch
+
+1. **Install and start Docker Desktop.** Use Linux containers and Docker Compose **v2.24 or later**. Wait until the Docker engine is running. Docker installs the application dependencies; you do not need to install Python, Chroma or SQLite separately for this route.
+2. **Get the project.** Install Git, open a terminal, and clone the repository:
+
+   ```sh
+   git clone https://github.com/PiyushGhegade/commutelens-policy-assistant.git
+   cd commutelens-policy-assistant
+   ```
+
+   Alternatively, download and extract the repository ZIP, then open a terminal in the extracted project folder.
+
+3. **Create your local configuration.** On a fresh clone, copy `.env.example` to `.env`. If `.env` already exists, keep it so your configured key is preserved.
+
+   PowerShell:
+
+   ```powershell
+   if (-not (Test-Path -LiteralPath .env)) { Copy-Item .env.example .env }
+   ```
+
+   macOS/Linux:
+
+   ```sh
+   [ -f .env ] || cp .env.example .env
+   ```
+
+4. **Configure Gemini.** Have a free-tier Gemini API key ready, open `.env` in your editor, and set:
+
+   ```dotenv
+   LLM_PROVIDER=gemini
+   GEMINI_API_KEY=your_free_tier_key_here
+   ```
+
+   Replace the placeholder with your own key. Keep the remaining defaults for the standard demo. `.env` is ignored by Git; keep your actual key out of source files and recordings. Alternative provider settings are described below.
+
+5. **Use an internet connection for the first build and real LLM requests.** The first build downloads dependencies and the local embedding model. The three sample policies and database are initialized automatically on first startup; no manual database setup or policy upload is needed.
+
 ## Start with one command
 
 With Docker Desktop running:
@@ -22,9 +73,9 @@ On Windows, the alternative verified local path is:
 
 This uses `uv` to obtain Python 3.12, or an existing `py -3.12` installation, installs the pinned dependencies, and starts the app on localhost. On Linux/macOS with Python 3.12 installed, run `sh run.sh`.
 
-### Configure a real LLM for the demo
+### LLM configuration options
 
-Copy `.env.example` to `.env` if it does not already exist. Keep the actual file private.
+The initial setup above configures Gemini. The provider and model can also be selected through your private `.env` file.
 
 For Gemini, set `LLM_PROVIDER=gemini` and `GEMINI_API_KEY` to your private free-tier AI Studio key. The default model is `gemini-3.5-flash-lite`, configurable through `GEMINI_MODEL`. One structured generation call selects supporting sections and writes the answer. Automatic retries are disabled to conserve quota. Legacy `GEMINI_SELECTION_MODE` and `GEMINI_DECISION_*` variables are ignored. Model availability and account quotas can vary.
 
@@ -58,19 +109,7 @@ The mock issuer looks up company and role in a server-side directory. It never a
 
 The policies are small JSON documents with named sections, rather than PDFs. This preserves section boundaries and gives each citation an exact address. The three policies intentionally disagree on eligibility, escorts, cutoffs, weekend travel, airport approvals, guest travel and no-show penalties. They contain fictional rules, not MoveInSync's real policies.
 
-## Design
-
-### Functional and non-functional requirements
-
-![CommuteLens functional and non-functional requirements](System%20Design/Funtional%20%26%20Non%20Funtional.png)
-
-### System architecture
-
-![CommuteLens application architecture, retrieval, answer generation and citation validation](System%20Design/System%20Design.png)
-
-### Policy ingestion flow
-
-![Policy ingestion flow from administrator authentication through indexing and atomic activation](System%20Design/Ingestion%20Connection.png)
+## Design details
 
 ### Request flow overview
 
