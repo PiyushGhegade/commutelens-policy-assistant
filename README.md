@@ -220,13 +220,6 @@ Business outcomes use a typed `status`: `answered`, `not_covered` or `try_again`
 - The fixed 28-case gold set is a useful regression suite, not a representative statistical estimate for every employee question. Report real model failures and provider dependence honestly.
 - No answer cache or query rewriting is used, so the retrieval experiment stays simple and every live semantic answer genuinely includes the LLM call.
 
-## Submission and viva material
-
-- [Evaluation report](docs/EVALUATION_REPORT.md) and raw JSONL/summary files under `artifacts/`.
-- [Requirement mapping](docs/REQUIREMENTS.md).
-- [Viva guide](docs/VIVA_GUIDE.md): short explanation, architecture, trade-offs, likely questions and five live-change exercises.
-- [Two-minute demo sequence and speaking points](docs/DEMO_SCRIPT.md). You will record the running app with your own voice.
-- [Submission checklist](docs/SUBMISSION.md): remaining account-level steps, evidence and secret checks.
 
 ### Technical references
 
