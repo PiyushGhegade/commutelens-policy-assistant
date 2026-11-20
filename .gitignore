@@ -1,0 +1,13 @@
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+data/
+artifacts/browser/
+*.log
+*.pyc
+CaseStudy/
+artifacts/submission.zip

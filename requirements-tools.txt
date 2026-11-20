@@ -1,0 +1,3 @@
+# Optional formatting, UI verification and recording tools; not needed to start the app.
+ruff==0.17.5
+playwright==1.65.2
