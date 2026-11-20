@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Commute · Policy assistant</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="/"
+        ><span class="logo">c</span>commute<span class="divider"></span
+        ><span class="brand-sub">Policy assistant</span></a
+      >
+      <div class="header-right">
+        <span class="dot"></span><span id="provider">Connecting</span
+        ><a href="/docs" target="_blank" rel="noopener">API ↗</a>
+      </div>
+    </header>
+    <main>
+      <aside>
+        <span class="eyebrow">CASE STUDY B · MOVEINSYNC</span>
+        <h1>Your commute.<br />Your company’s policy.</h1>
+        <p class="intro">
+          Ask a question. Check the source.<br />Know what applies to you.
+        </p>
+        <div class="login-panel">
+          <label for="username">Demo employee</label>
+          <select id="username">
+            <option value="asha">Asha · Atlas Labs</option>
+            <option value="bilal">Bilal · Beacon Works</option>
+            <option value="chitra">Chitra · Cedar Systems</option>
+            <option value="atlas-admin">Policy admin · Atlas Labs</option>
+            <option value="beacon-admin">Policy admin · Beacon Works</option>
+            <option value="cedar-admin">Policy admin · Cedar Systems</option>
+          </select>
+          <label for="password">Demo password</label
+          ><input
+            id="password"
+            type="password"
+            value="commute-demo"
+            autocomplete="current-password"
+          />
+          <button class="secondary" id="login">Sign in</button>
+          <p id="session">Sign in to load your policy.</p>
+        </div>
+        <div class="examples">
+          <span class="eyebrow">TRY A QUESTION</span>
+          <button class="sample">
+            When is a night shift security escort required?
+          </button>
+          <button class="sample">Can I book a pickup on Saturday?</button>
+          <button class="sample">What happens after two no-shows?</button>
+          <button class="sample">Does the policy cover bicycle repairs?</button>
+        </div>
+        <div class="sidebar-note">
+          Three fictional companies. Contradictory rules.<br />Every session has
+          one company scope.
+        </div>
+      </aside>
+      <section class="workspace">
+        <nav>
+          <button class="tab active" data-tab="ask">Ask your policy</button
+          ><button class="tab" data-tab="source">Source document</button
+          ><button class="tab" data-tab="publish">Publish a version</button>
+        </nav>
+        <div id="ask" class="pane">
+          <div class="workspace-heading">
+            <div>
+              <span class="eyebrow" id="company-label">EMPLOYEE TRANSPORT</span>
+              <h2>A clear answer starts with evidence.</h2>
+            </div>
+            <span class="version" id="version">—</span>
+          </div>
+          <form id="question-form">
+            <label for="question">What would you like to know?</label>
+            <textarea
+              id="question"
+              rows="3"
+              placeholder="e.g. Who approves an airport cab, and what is the cost cap?"
+              maxlength="1200"
+              required
+              minlength="3"
+            ></textarea>
+            <div class="form-footer">
+              <label class="method-label"
+                >Retrieval
+                <select id="method">
+                  <option value="hybrid">Hybrid · dense + BM25</option>
+                  <option value="dense">Baseline · dense only</option>
+                </select></label
+              ><button id="submit" type="submit">
+                Ask policy <span>↗</span>
+              </button>
+            </div>
+          </form>
+          <div id="result" aria-live="polite">
+            <div class="empty">
+              <span class="empty-icon">“</span>
+              <h3>Answers you can trace.</h3>
+              <p>
+                Your answer will appear here with the exact policy<br />section,
+                document name, and version.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div id="source" class="pane hidden">
+          <div class="workspace-heading">
+            <div>
+              <span class="eyebrow">CURRENT VERSION ONLY</span>
+              <h2 id="source-title">Your policy document</h2>
+            </div>
+          </div>
+          <div id="source-sections"></div>
+        </div>
+        <div id="publish" class="pane hidden">
+          <div class="workspace-heading">
+            <div>
+              <span class="eyebrow">POLICY ADMINISTRATOR</span>
+              <h2>Publish a complete new version.</h2>
+            </div>
+          </div>
+          <p class="muted">
+            Sign in as your company’s policy admin. Edit the full document
+            below. The live version switches only after every section is indexed
+            successfully.
+          </p>
+          <button class="secondary" id="load-policy">
+            Load current policy for editing</button
+          ><label for="policy-json">Complete policy JSON</label
+          ><textarea
+            id="policy-json"
+            rows="16"
+            spellcheck="false"
+            placeholder="Load the current policy, increase its version, and edit a rule."
+          ></textarea>
+          <div class="form-footer">
+            <span class="muted">Versions must increase.</span
+            ><button id="publish-policy">Index and activate ↗</button>
+          </div>
+          <p id="publish-message" aria-live="polite"></p>
+        </div>
+        <footer>
+          <span>Evidence first. One company. Current policy.</span
+          ><span>Python · FastAPI · Chroma · JWT</span>
+        </footer>
+      </section>
+    </main>
+    <script src="/static/app.js?v=reasoned-answers-1"></script>
+  </body>
+</html>
