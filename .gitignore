@@ -11,3 +11,5 @@ artifacts/browser/
 *.pyc
 CaseStudy/
 artifacts/submission.zip
+# Full video recordings are published as GitHub Release assets.
+/Demo&Intialization/*.mp4
