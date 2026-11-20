@@ -1,0 +1,14 @@
+{
+  "document": "Atlas Labs Employee Transport Policy",
+  "version": 1,
+  "sections": [
+    {"id": "eligibility", "title": "Transport eligibility", "text": "Atlas Labs employees in grades G3 and above who live at least 5 km from the office are eligible for regular cab transport."},
+    {"id": "night", "title": "Night shift safety escort", "text": "For women employees at Atlas Labs, drops after 8 PM require a security escort. An escort is not required by this rule for a drop exactly at 8 PM."},
+    {"id": "cutoff", "title": "Booking and change cutoff", "text": "Atlas Labs cab bookings and shift changes must be requested at least 2 hours before the scheduled trip. Late exceptions require the transport manager's approval."},
+    {"id": "weekend", "title": "Weekend and holiday travel", "text": "Atlas Labs provides Saturday pickups only with prior line manager approval. Sunday and public holiday pickups require transport manager approval."},
+    {"id": "airport", "title": "Airport trip approvals", "text": "Airport cab trips at Atlas Labs require prior approval from the department head. The approved airport trip cost cap is INR 1500 per trip."},
+    {"id": "noshow", "title": "No show penalties", "text": "At Atlas Labs, two no-shows within a calendar month lead to a 7-day suspension of cab booking access. The transport desk reviews disputes."},
+    {"id": "guest", "title": "Guest travel", "text": "Guests and family members may not use Atlas Labs employee cabs. Employees must arrange separate travel for guests."},
+    {"id": "adhoc", "title": "Ad hoc trip requests", "text": "Atlas Labs ad hoc office cab trips require transport manager approval and have a cost cap of INR 800 per trip."}
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "document": "Beacon Works Employee Transport Policy",
+  "version": 1,
+  "sections": [
+    {"id": "eligibility", "title": "Transport eligibility", "text": "All full-time Beacon Works employees are eligible for regular cab transport regardless of grade or distance from the office."},
+    {"id": "night", "title": "Night shift safety escort", "text": "For women employees at Beacon Works, drops after 10 PM require a security escort. An escort is not required by this rule for a drop exactly at 10 PM."},
+    {"id": "cutoff", "title": "Booking and change cutoff", "text": "Beacon Works cab bookings and shift changes must be requested at least 4 hours before the scheduled trip. Late exceptions require the site admin's approval."},
+    {"id": "weekend", "title": "Weekend and holiday travel", "text": "Beacon Works provides Saturday pickups without manager approval for rostered shifts. Sunday and public holiday pickups are not offered."},
+    {"id": "airport", "title": "Airport trip approvals", "text": "Airport cab trips at Beacon Works require prior approval from the finance manager. The approved airport trip cost cap is INR 2500 per trip."},
+    {"id": "noshow", "title": "No show penalties", "text": "At Beacon Works, two no-shows within a calendar month lead to a written warning. A third no-show in the same month leads to a 3-day suspension of cab booking access."},
+    {"id": "guest", "title": "Guest travel", "text": "A registered business guest may use a Beacon Works cab with site admin approval. Family members may not use employee cabs."},
+    {"id": "adhoc", "title": "Ad hoc trip requests", "text": "Beacon Works ad hoc office cab trips require site admin approval and have a cost cap of INR 1200 per trip."}
+  ]
+}
