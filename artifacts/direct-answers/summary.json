@@ -1,0 +1,43 @@
+{
+  "run_at_utc": "2026-11-20T19:08:17.141387+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.13",
+  "provider": "gemini",
+  "embedding": "minilm",
+  "timing": "Sequential local API calls; elapsed wall time includes LLM. First provider connection is included. Model/index warmup happens at app startup.",
+  "answer_timeout_seconds": 2.8,
+  "sample_size_per_method": 28,
+  "fake_notice": "Real remote LLM, no answer cache; up to two bounded selection attempts inside one overall deadline.",
+  "methods": {
+    "hybrid": {
+      "cases": 28,
+      "passed": 28,
+      "answer_accuracy": 1,
+      "retrieval_recall_at_3": 1.0,
+      "retrieval_mrr_at_3": 1.0,
+      "citation_validity": 1,
+      "answers_with_citations": 20,
+      "negative_accuracy": 1,
+      "p95_wall_ms": 2030.44,
+      "p50_wall_ms": 636.43,
+      "successful_reply_p95_ms": 2030.44,
+      "mean_retrieval_ms": 29.324285714285715,
+      "p95_retrieval_ms": 34.42,
+      "try_again_count": 0,
+      "reasons": {
+        "": 20,
+        "outside_company": 3,
+        "insufficient_evidence": 5
+      },
+      "failed_ids": [],
+      "max_llm_calls": 2,
+      "max_cited_chunks": 2,
+      "latency_target_met": true,
+      "direct_answer_rate": 1.0
+    }
+  },
+  "model": "gemini-decision-1",
+  "selection_mode": "decision",
+  "fallback_model": "gemini-3.5-flash-lite",
+  "presentation_check": "Rechecked saved real responses offline: all 20 answered responses use direct wording distinct from full citation quotes; no extra model requests."
+}

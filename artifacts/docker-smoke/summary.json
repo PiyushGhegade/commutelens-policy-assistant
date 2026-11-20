@@ -1,0 +1,76 @@
+{
+  "run_at_utc": "2026-11-18T16:01:15.892680+00:00",
+  "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "python": "3.12.16",
+  "provider": "fake",
+  "embedding": "hash-test",
+  "timing": "Sequential local API calls; elapsed wall time includes LLM. First provider connection is included. Model/index warmup happens at app startup.",
+  "answer_timeout_seconds": 2.8,
+  "sample_size_per_method": 28,
+  "fake_notice": "Fake LLM measures pipeline behaviour only; it does not establish real LLM answer quality.",
+  "methods": {
+    "dense": {
+      "cases": 28,
+      "passed": 22,
+      "answer_accuracy": 0.7857142857142857,
+      "retrieval_recall_at_3": 0.9,
+      "retrieval_mrr_at_3": 0.875,
+      "citation_validity": 1,
+      "answers_with_citations": 21,
+      "negative_accuracy": 0.625,
+      "p95_wall_ms": 6.31,
+      "p50_wall_ms": 5.1,
+      "successful_reply_p95_ms": 6.31,
+      "mean_retrieval_ms": 1.8303571428571428,
+      "p95_retrieval_ms": 2.56,
+      "try_again_count": 0,
+      "reasons": {
+        "": 21,
+        "insufficient_evidence": 4,
+        "outside_company": 3
+      },
+      "failed_ids": [
+        "atlas-saturday",
+        "beacon-saturday",
+        "missing-route",
+        "user-injection",
+        "compound-covered",
+        "compound-missing"
+      ],
+      "max_llm_calls": 1,
+      "max_cited_chunks": 1,
+      "latency_target_met": null
+    },
+    "hybrid": {
+      "cases": 28,
+      "passed": 24,
+      "answer_accuracy": 0.8571428571428571,
+      "retrieval_recall_at_3": 1.0,
+      "retrieval_mrr_at_3": 1.0,
+      "citation_validity": 1,
+      "answers_with_citations": 23,
+      "negative_accuracy": 0.625,
+      "p95_wall_ms": 7.17,
+      "p50_wall_ms": 5.44,
+      "successful_reply_p95_ms": 7.17,
+      "mean_retrieval_ms": 2.010357142857143,
+      "p95_retrieval_ms": 2.93,
+      "try_again_count": 0,
+      "reasons": {
+        "": 23,
+        "outside_company": 3,
+        "insufficient_evidence": 2
+      },
+      "failed_ids": [
+        "missing-route",
+        "user-injection",
+        "compound-covered",
+        "compound-missing"
+      ],
+      "max_llm_calls": 1,
+      "max_cited_chunks": 1,
+      "latency_target_met": null
+    }
+  },
+  "model": "deterministic-overlap-test-double"
+}

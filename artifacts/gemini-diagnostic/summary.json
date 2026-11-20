@@ -1,0 +1,41 @@
+{
+  "run_at_utc": "2026-11-18T15:44:33.873807+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.13",
+  "provider": "gemini",
+  "embedding": "minilm",
+  "timing": "Sequential local API calls; elapsed wall time includes LLM. First provider connection is included. Model/index warmup happens at app startup.",
+  "answer_timeout_seconds": 12.0,
+  "sample_size_per_method": 3,
+  "fake_notice": "Real remote LLM, no answer cache, no retries.",
+  "methods": {
+    "hybrid": {
+      "cases": 3,
+      "passed": 0,
+      "answer_accuracy": 0,
+      "retrieval_recall_at_3": 1.0,
+      "retrieval_mrr_at_3": 1.0,
+      "citation_validity": null,
+      "answers_with_citations": 0,
+      "negative_accuracy": null,
+      "p95_wall_ms": 2132.91,
+      "p50_wall_ms": 1906.74,
+      "successful_reply_p95_ms": null,
+      "mean_retrieval_ms": 220.81666666666666,
+      "p95_retrieval_ms": 285.0,
+      "try_again_count": 3,
+      "reasons": {
+        "llm_unavailable": 3
+      },
+      "failed_ids": [
+        "atlas-night",
+        "beacon-night",
+        "cedar-night"
+      ],
+      "max_llm_calls": 1,
+      "max_cited_chunks": 0,
+      "latency_target_met": false
+    }
+  },
+  "model": "gemini-3.1-flash-lite"
+}

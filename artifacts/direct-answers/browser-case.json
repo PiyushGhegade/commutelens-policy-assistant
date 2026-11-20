@@ -1,0 +1,50 @@
+{
+  "input": {
+    "username": "asha",
+    "question": "Can I book a cab for Saturday, and how many hours before the trip must I request it?"
+  },
+  "actual": {
+    "status": "answered",
+    "answer": "Yes. Saturday pickups are permitted only with prior line manager approval. [1]\n\nSubmit your cab booking or shift-change request at least 2 hours before the scheduled trip. [2]",
+    "citations": [
+      {
+        "document": "Atlas Labs Employee Transport Policy",
+        "version": 1,
+        "section_id": "weekend",
+        "section": "Weekend and holiday travel",
+        "quote": "Atlas Labs provides Saturday pickups only with prior line manager approval. Sunday and public holiday pickups require transport manager approval."
+      },
+      {
+        "document": "Atlas Labs Employee Transport Policy",
+        "version": 1,
+        "section_id": "cutoff",
+        "section": "Booking and change cutoff",
+        "quote": "Atlas Labs cab bookings and shift changes must be requested at least 2 hours before the scheduled trip. Late exceptions require the transport manager's approval."
+      }
+    ],
+    "company": "atlas",
+    "version": 1,
+    "llm_calls": 1,
+    "latency_ms": 1003.97,
+    "retrieval_ms": 50.54,
+    "retrieved_ids": [
+      "cutoff",
+      "weekend",
+      "guest"
+    ],
+    "provider": "gemini",
+    "reason": "",
+    "request_id": "6f479940e4824b7b8e28f0c8d923d0ff",
+    "llm_model": "gemini-decision-1",
+    "llm_attempts": [
+      {
+        "model": "gemini-decision-1",
+        "status": "ok",
+        "latency_ms": 951.18,
+        "http_status": null
+      }
+    ],
+    "answer_style": "direct"
+  },
+  "pass": true
+}

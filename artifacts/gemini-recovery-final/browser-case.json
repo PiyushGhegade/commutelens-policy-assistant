@@ -1,0 +1,42 @@
+{
+  "input": {
+    "username": "asha",
+    "question": "If my cab drops me at 9:30 PM, will I get a security escort?"
+  },
+  "actual": {
+    "status": "answered",
+    "answer": "For women employees at Atlas Labs, drops after 8 PM require a security escort. An escort is not required by this rule for a drop exactly at 8 PM. [1]",
+    "citations": [
+      {
+        "document": "Atlas Labs Employee Transport Policy",
+        "version": 1,
+        "section_id": "night",
+        "section": "Night shift safety escort",
+        "quote": "For women employees at Atlas Labs, drops after 8 PM require a security escort. An escort is not required by this rule for a drop exactly at 8 PM."
+      }
+    ],
+    "company": "atlas",
+    "version": 1,
+    "llm_calls": 1,
+    "latency_ms": 782.38,
+    "retrieval_ms": 51.51,
+    "retrieved_ids": [
+      "night",
+      "eligibility",
+      "noshow"
+    ],
+    "provider": "gemini",
+    "reason": "",
+    "request_id": "dc20945de0bf495d97bd30cd44ad666c",
+    "llm_model": "gemini-decision-1",
+    "llm_attempts": [
+      {
+        "model": "gemini-decision-1",
+        "status": "ok",
+        "latency_ms": 729.58,
+        "http_status": null
+      }
+    ]
+  },
+  "pass": true
+}

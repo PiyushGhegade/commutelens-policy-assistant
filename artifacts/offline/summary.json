@@ -1,0 +1,73 @@
+{
+  "run_at_utc": "2026-11-18T15:50:07.988641+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.13",
+  "provider": "fake",
+  "embedding": "minilm",
+  "timing": "Sequential local API calls; elapsed wall time includes LLM. First provider connection is included. Model/index warmup happens at app startup.",
+  "answer_timeout_seconds": 2.8,
+  "sample_size_per_method": 28,
+  "fake_notice": "Fake LLM measures pipeline behaviour only; it does not establish real LLM answer quality.",
+  "methods": {
+    "dense": {
+      "cases": 28,
+      "passed": 25,
+      "answer_accuracy": 0.8928571428571429,
+      "retrieval_recall_at_3": 1.0,
+      "retrieval_mrr_at_3": 1.0,
+      "citation_validity": 1,
+      "answers_with_citations": 22,
+      "negative_accuracy": 0.75,
+      "p95_wall_ms": 117.24,
+      "p50_wall_ms": 114.07,
+      "successful_reply_p95_ms": 117.24,
+      "mean_retrieval_ms": 90.22321428571429,
+      "p95_retrieval_ms": 104.15,
+      "try_again_count": 0,
+      "reasons": {
+        "": 22,
+        "outside_company": 3,
+        "insufficient_evidence": 3
+      },
+      "failed_ids": [
+        "user-injection",
+        "compound-covered",
+        "compound-missing"
+      ],
+      "max_llm_calls": 1,
+      "max_cited_chunks": 1,
+      "latency_target_met": null
+    },
+    "hybrid": {
+      "cases": 28,
+      "passed": 24,
+      "answer_accuracy": 0.8571428571428571,
+      "retrieval_recall_at_3": 1.0,
+      "retrieval_mrr_at_3": 1.0,
+      "citation_validity": 1,
+      "answers_with_citations": 23,
+      "negative_accuracy": 0.625,
+      "p95_wall_ms": 116.68,
+      "p50_wall_ms": 114.1,
+      "successful_reply_p95_ms": 116.68,
+      "mean_retrieval_ms": 85.93642857142856,
+      "p95_retrieval_ms": 103.91,
+      "try_again_count": 0,
+      "reasons": {
+        "": 23,
+        "outside_company": 3,
+        "insufficient_evidence": 2
+      },
+      "failed_ids": [
+        "missing-route",
+        "user-injection",
+        "compound-covered",
+        "compound-missing"
+      ],
+      "max_llm_calls": 1,
+      "max_cited_chunks": 1,
+      "latency_target_met": null
+    }
+  },
+  "model": "deterministic-overlap-test-double"
+}

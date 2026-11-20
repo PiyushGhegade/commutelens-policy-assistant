@@ -1,0 +1,75 @@
+{
+  "run_at_utc": "2026-11-18T15:40:02.884222+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.13",
+  "provider": "gemini",
+  "embedding": "minilm",
+  "timing": "Sequential local API calls; elapsed wall time includes LLM. First provider connection is included. Model/index warmup happens at app startup.",
+  "answer_timeout_seconds": 2.8,
+  "sample_size_per_method": 6,
+  "fake_notice": "Real remote LLM, no answer cache, no retries.",
+  "methods": {
+    "dense": {
+      "cases": 6,
+      "passed": 0,
+      "answer_accuracy": 0,
+      "retrieval_recall_at_3": 1.0,
+      "retrieval_mrr_at_3": 1.0,
+      "citation_validity": 1,
+      "negative_accuracy": null,
+      "p95_wall_ms": 2776.19,
+      "p50_wall_ms": 2544.03,
+      "successful_reply_p95_ms": null,
+      "mean_retrieval_ms": 179.42,
+      "p95_retrieval_ms": 250.27,
+      "try_again_count": 6,
+      "reasons": {
+        "llm_timeout": 4,
+        "llm_unavailable": 2
+      },
+      "failed_ids": [
+        "atlas-night",
+        "beacon-night",
+        "cedar-night",
+        "atlas-saturday",
+        "beacon-saturday",
+        "cedar-sunday"
+      ],
+      "max_llm_calls": 1,
+      "max_cited_chunks": 0,
+      "latency_target_met": false
+    },
+    "hybrid": {
+      "cases": 6,
+      "passed": 0,
+      "answer_accuracy": 0,
+      "retrieval_recall_at_3": 1.0,
+      "retrieval_mrr_at_3": 1.0,
+      "citation_validity": 1,
+      "negative_accuracy": null,
+      "p95_wall_ms": 2825.61,
+      "p50_wall_ms": 2657.22,
+      "successful_reply_p95_ms": null,
+      "mean_retrieval_ms": 184.99166666666667,
+      "p95_retrieval_ms": 287.85,
+      "try_again_count": 6,
+      "reasons": {
+        "answer_timeout": 1,
+        "llm_timeout": 4,
+        "llm_unavailable": 1
+      },
+      "failed_ids": [
+        "atlas-night",
+        "beacon-night",
+        "cedar-night",
+        "atlas-saturday",
+        "beacon-saturday",
+        "cedar-sunday"
+      ],
+      "max_llm_calls": 1,
+      "max_cited_chunks": 0,
+      "latency_target_met": false
+    }
+  },
+  "model": "gemini-3.1-flash-lite"
+}

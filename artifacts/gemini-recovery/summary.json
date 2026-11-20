@@ -1,0 +1,54 @@
+{
+  "run_at_utc": "2026-11-20T18:37:10.509262+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.13",
+  "provider": "gemini",
+  "embedding": "minilm",
+  "timing": "Sequential local API calls; elapsed wall time includes LLM. First provider connection is included. Model/index warmup happens at app startup.",
+  "answer_timeout_seconds": 2.8,
+  "sample_size_per_method": 28,
+  "fake_notice": "Real remote LLM, no answer cache; up to two bounded selection attempts inside one overall deadline.",
+  "methods": {
+    "hybrid": {
+      "cases": 28,
+      "passed": 17,
+      "answer_accuracy": 0.6071428571428571,
+      "retrieval_recall_at_3": 0.6,
+      "retrieval_mrr_at_3": 0.6,
+      "citation_validity": 1,
+      "answers_with_citations": 12,
+      "negative_accuracy": 0.625,
+      "p95_wall_ms": 1511.77,
+      "p50_wall_ms": 47.98,
+      "successful_reply_p95_ms": 2012.02,
+      "mean_retrieval_ms": 29.879285714285714,
+      "p95_retrieval_ms": 37.66,
+      "try_again_count": 11,
+      "reasons": {
+        "verification_failed": 11,
+        "": 12,
+        "outside_company": 3,
+        "insufficient_evidence": 2
+      },
+      "failed_ids": [
+        "atlas-night",
+        "atlas-saturday",
+        "atlas-airport",
+        "atlas-noshow",
+        "atlas-cutoff",
+        "paraphrase-night",
+        "missing-bicycle",
+        "user-injection",
+        "compound-covered",
+        "compound-missing",
+        "exact-boundary"
+      ],
+      "max_llm_calls": 2,
+      "max_cited_chunks": 1,
+      "latency_target_met": false
+    }
+  },
+  "model": "gemini-decision-1",
+  "selection_mode": "decision",
+  "fallback_model": "gemini-3.5-flash-lite"
+}
