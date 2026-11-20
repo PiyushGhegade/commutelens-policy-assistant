@@ -4,9 +4,9 @@
 
 | Recording | Duration | Size | Download |
 | --- | --- | ---: | --- |
-| Application demo | 4:43 | 269.6 MiB | [Download MP4](https://github.com/PiyushGhegade/commutelens-policy-assistant/releases/download/untagged-ecd535bdb103a545a226/demo.mp4) |
-| Initial setup | 2:12 | 125.9 MiB | [Download MP4](https://github.com/PiyushGhegade/commutelens-policy-assistant/releases/download/untagged-ecd535bdb103a545a226/initialization.mp4) |
-| System design walkthrough | 10:14 | 547.0 MiB | [Download MP4](https://github.com/PiyushGhegade/commutelens-policy-assistant/releases/download/untagged-ecd535bdb103a545a226/system-design.mp4) |
+| Application demo | 4:43 | 269.6 MiB | [Download MP4](https://github.com/PiyushGhegade/commutelens-policy-assistant/releases/download/demo-recordings-v1/demo.mp4) |
+| Initial setup | 2:12 | 125.9 MiB | [Download MP4](https://github.com/PiyushGhegade/commutelens-policy-assistant/releases/download/demo-recordings-v1/initialization.mp4) |
+| System design walkthrough | 10:14 | 547.0 MiB | [Download MP4](https://github.com/PiyushGhegade/commutelens-policy-assistant/releases/download/demo-recordings-v1/system-design.mp4) |
 
 These are the full walkthrough recordings. Download an MP4 and open it in your video player.
 
